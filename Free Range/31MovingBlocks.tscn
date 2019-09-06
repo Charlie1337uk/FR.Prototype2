@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://1MovingBlocks.tscn" type="PackedScene" id=1]
+[ext_resource path="res://31MovingBlocks.gd" type="Script" id=2]
+[ext_resource path="res://crArea2D.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.1781
+height = 15.0702
+
+[node name="crush" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+move_to = Vector2( 210, 220 )
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( 3.8147e-006, -4.76878e-006 )
+rotation = 1.56653
+shape = SubResource( 1 )

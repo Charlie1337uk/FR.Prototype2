@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://35MovingBlocks.tscn" type="PackedScene" id=1]
+[ext_resource path="res://37MovingBlocks.gd" type="Script" id=2]
+
+[node name="37MovingBlocks" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+move_to = Vector2( 2350, 1100 )
